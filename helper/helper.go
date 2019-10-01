@@ -2,8 +2,8 @@ package helper
 
 import (
 	"encoding/json"
+	"github.com/alkaaf/smartlink-base/model/template"
 	"math/rand"
-	"model/template"
 	"strconv"
 )
 
