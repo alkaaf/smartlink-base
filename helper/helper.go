@@ -10,7 +10,7 @@ import (
 func SendSms(p template.SMSPayload) {
 	data, _ := json.Marshal(p)
 	nc := NatsConn()
-	nc.Publish("sms.send", data)
+	_ = nc.Publish("sms.send", data)
 }
 
 func OtpGen() string {
