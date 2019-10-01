@@ -1,5 +1,7 @@
 package helper
 
-func x() {
+import "fmt"
 
+func x() {
+	fmt.Println("Aaa")
 }

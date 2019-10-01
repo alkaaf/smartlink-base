@@ -3,6 +3,7 @@ package helper
 import (
 	"fmt"
 	"github.com/jinzhu/gorm"
+	"github.com/joho/godotenv"
 	"os"
 )
 import _ "github.com/go-sql-driver/mysql"
@@ -12,7 +13,7 @@ var db *gorm.DB
 var err error
 
 func GetDb() *gorm.DB {
-
+	godotenv.Load()
 	if db == nil {
 		db, err = gorm.Open("mysql", fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?parseTime=True&loc=Local",
 			os.Getenv("DB_USER"),

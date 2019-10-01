@@ -2,6 +2,7 @@ package helper
 
 import (
 	"github.com/go-redis/redis"
+	"github.com/joho/godotenv"
 	"os"
 )
 
@@ -19,6 +20,7 @@ func PGetRedis() *redis.Client {
 }
 
 func GetRedis() *redis.Client {
+	godotenv.Load()
 	return redis.NewClient(&redis.Options{
 		Addr:     os.Getenv("REDIS_HOST"),
 		Password: os.Getenv("REDIS_PASS"),
