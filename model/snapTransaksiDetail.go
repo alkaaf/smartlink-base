@@ -17,7 +17,9 @@ type SnapTransaksiDetail struct {
 	Harga            float64      `json:"harga"`
 	Durasi           int64        `json:"durasi"`
 	Tipe             int          `json:"tipe"`
+	IdsnapTag        string       `json:"idsnap_tag"`
 	Idoutlet         string       `json:"idoutlet" gorm:"index"`
+	SnapTag          *SnapTag     `json:"snap_tag"`
 	SnapLayanan      *SnapLayanan `json:"snap_layanan" gorm:"foreignKey:idsnap_layanan;association_foreignkey:id"`
 	SnapMesin        *SnapMesin   `json:"snap_mesin" gorm:"foreignKey:idsnap_mesin;association_foreignkey:id"`
 	Misc             interface{}  `json:"misc" gorm:"-"`

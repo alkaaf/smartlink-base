@@ -9,5 +9,6 @@ type SnapMesin struct {
 	Load       float32 `json:"load"`
 	Keterangan string  `json:"keterangan"`
 	Mode       int     `json:"mode"`
+	IdsnapTag  string  `json:"idsnap_tag"`
 	BaseModel
 }
