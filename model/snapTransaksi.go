@@ -4,7 +4,7 @@ type SnapTransaksi struct {
 	Id                  string                `json:"id" gorm:"primaryKey;index;notNull"`
 	Qty                 float64               `json:"qty"`
 	Idoutlet            string                `json:"idoutlet" gorm:"index"`
-	Idowner             string                `json:"idowner" gorm:"index"`
+	Idowner             string                `json:"idowner" gorm:"index" swagger:"ignore"`
 	IdcustomerGlobal    *string               `json:"idcustomer_global" gorm:"index"`
 	Idkaryawan          *string               `json:"idkaryawan" gorm:"index"`
 	NamaCustomer        *string               `json:"nama_customer"`

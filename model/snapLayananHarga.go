@@ -8,7 +8,7 @@ type SnapLayananHarga struct {
 	Idoutlet      string       `json:"idoutlet" gorm:"index"`
 	Owner         *Owner       `json:"owner"`
 	Outlet        *Outlet      `json:"outlet"`
-	SnapLayanan   *SnapLayanan `json:"snap_layanan"`
-	SnapTag       *SnapTag     `json:"snap_tag"`
+	SnapLayanan   *SnapLayanan `json:"snap_layanan" gorm:"foreignkey:id;association_foreignkey:idsnap_layanan"`
+	SnapTag       *SnapTag     `json:"snap_tag" gorm:"foreignkey:id;association_foreignkey:idsnap_tag"`
 	BaseModel
 }
