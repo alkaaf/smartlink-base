@@ -17,7 +17,7 @@ type Owner struct {
 	LevelAfiliasi       int        `json:"level_afiliasi"`
 	KodeAfiliasi        string     `json:"kode_afiliasi"`
 	kodeAfiliator       string     `json:"kode_afiliator"`
-	PersentaseAfiliator string     `json:"persentase_afiliator"`
+	PersentaseAfiliator int        `json:"persentase_afiliator"`
 	SaldoAfiliator      float32    `json:"saldo_afiliator"`
 	TutorNumber         int        `json:"tutor_number"`
 	DataGenerated       int        `json:"data_generated"`
