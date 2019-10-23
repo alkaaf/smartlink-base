@@ -3,7 +3,7 @@ package model
 import "time"
 
 type Owner struct {
-	Idowner             string     `json:"idowner" gorm:"primarykey;index"`
+	Idowner             string     `json:"idowner" gorm:"primary_key"`
 	Nama                string     `json:"nama"`
 	Email               string     `json:"email"`
 	Password            string     `json:"-"`
@@ -21,12 +21,12 @@ type Owner struct {
 	SaldoAfiliator      float32    `json:"saldo_afiliator"`
 	TutorNumber         int        `json:"tutor_number"`
 	DataGenerated       int        `json:"data_generated"`
-	ExpiryTrialDate     time.Time  `json:"expiry_trial_date"`
+	ExpiryTrialDate     *time.Time `json:"expiry_trial_date"`
 	Active              int        `json:"active"`
 	LastLogin           *time.Time `json:"last_login"`
 	EmailReminders      string     `json:"email_reminders"`
 	Versi               string     `json:"versi"`
-	DateReset           time.Time  `json:"date_reset"`
+	DateReset           *time.Time `json:"date_reset"`
 	SmsPremium          int        `json:"sms_premium"`
 	UploadToken         string     `json:"upload_token"`
 	LastKoinNotif       int        `json:"last_koin_notif"`

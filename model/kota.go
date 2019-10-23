@@ -3,7 +3,7 @@ package model
 import "time"
 
 type Kota struct {
-	Id        string     `json:"id" gorm:"primarykey;index"`
+	Id        string     `json:"id" gorm:"primary_key"`
 	NegaraId  string     `json:"negara_id"`
 	Nama      string     `json:"nama"`
 	Status    string     `json:"status"`
