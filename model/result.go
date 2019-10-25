@@ -14,3 +14,9 @@ type OtpResult struct {
 	Msg    string      `json:"msg"`
 	Data   interface{} `json:"data"`
 }
+type AuthResult struct {
+	Code   int         `json:"code"`
+	Reason string      `json:"reason"`
+	Msg    string      `json:"msg"`
+	Data   interface{} `json:"data"`
+}
